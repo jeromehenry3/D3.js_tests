@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Rectangle SVG</title>
+</head>
+<body>
+    <svg width="1500px" height="1000px">
+        <!-- <rect width="120px" height="150px"/> -->
+        <!-- <circle r="30px" cx="31px" cy="31px"/> -->
+        <!-- <ellipse rx="200" ry="100" cx="205" cy="405" fill="green"></ellipse> -->
+        <!-- <line x1="25" y1="25" x2="500" y2="500" stroke="black"></line> -->
+
+        <!-- polygons & polylines -->
+        <!-- <polygon points="220,10 300,201 100,75 50,20" fill="none" stroke="black"></polygon> -->
+        <!-- <polyline points="31,31 205,405 200,100 50,20" fill="none" stroke="black"></polyline> -->
+        <!-- <path d="
+                    m50,50
+                    l100,100
+                    l150,50
+                    q100,400 100,200
+        "
+        fill="none" stroke="#000" stroke-width="10"></path> -->
+        <!-- <a href="google.fr">
+            <text x="50" y="50" fill="blue" font-size="30">
+                Hello world !
+                <tspan x="200" y="200">seconde ligne</tspan>
+            </text>
+        </a> -->
+        <!-- <defs>
+            <g id="rectangle">
+                <rect width="100" height="50" x="150" y="150"></rect>
+                <rect width="50" height="50"></rect>
+            </g>
+        </defs>
+
+        <use xlink:href="#rectangle" x="0" y="0"></use>
+        <use xlink:href="#rectangle" x="100" y="150"></use> -->
+
+        <!-- <defs>
+            <path id="custom-text-path"
+                    d="M0,0 Q0,100 300,110"    
+            ></path>
+        </defs>
+        <text x="10" y="100" font-size="30" stroke="black">
+            <textpath xlink:href="#custom-text-path">
+                Hello world !
+            </textpath>
+        </text> -->
+        <defs>
+            <clippath id="clip-path">
+                <rect x="250" y="250" width="200" height="200"></rect>
+            </clippath>
+        </defs>
+        <circle cx="250" cy="250" r="200" fill="blue" clip-path="url(#clip-path)"></circle>
+
+    </svg>
+</body>
+    <script src="app.js"></script>
+</html>
